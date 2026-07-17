@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F5F2EB;
+  --color-foreground: #111111;
+  --color-primary: #86A789;
+  --color-secondary: #D8B54B;
+  --color-accent: #FCFAF7;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-cursive: 'Caveat', cursive;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(circle, #E5DFD3 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+::selection {
+  background-color: rgba(134, 167, 137, 0.4); /* primary/40 */
+  color: #111111;
+}
+
+@layer utilities {
+  .retro-card {
+    @apply bg-[#FCFAF7] border-2 border-[#D3CBB8] rounded-2xl shadow-[6px_6px_0_rgba(17,17,17,0.05)];
+  }
+  .retro-btn {
+    @apply rounded-full border-2 border-[#111111] font-semibold flex items-center justify-center transition-all;
+  }
+}
