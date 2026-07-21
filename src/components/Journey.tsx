@@ -27,8 +27,8 @@ export default function Journey() {
         </motion.div>
 
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 top-6 md:top-8 bottom-0 w-1.5 bg-[#111111]" />
+          {/* Vertical line — ends at the last dot center (pb offset = half dot height) */}
+          <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 top-6 md:top-8 bottom-8 md:bottom-8 w-1.5 bg-[#111111]" />
 
           <div className="space-y-10 md:space-y-16">
             {milestones.map((milestone, index) => (

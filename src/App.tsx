@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Journey from './components/Journey';
+import Music from './components/Music';
 import TechStack from './components/TechStack';
 import Philosophy from './components/Philosophy';
 import Services from './components/Services';
@@ -20,6 +21,7 @@ function App() {
         <About />
         <Projects />
         <Journey />
+        <Music />
         <TechStack />
         <Philosophy />
         <Services />
