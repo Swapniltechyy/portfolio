@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { Music2, Calendar, Pause, Play, Volume2, VolumeX } from 'lucide-react';
+import { Music2, Pause, Play, Volume2, VolumeX } from 'lucide-react';
 
 /* â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 type CoverSong = {
@@ -133,9 +133,9 @@ function useReelAngle(playing: boolean) {
 
 /* â”€â”€â”€ Cassette SVG â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function CassetteSVG({
-  label, subLabel, isPlaying, reelAngle,
+  label, subLabel, reelAngle,
 }: {
-  label: string; subLabel: string; isPlaying: boolean; reelAngle: number;
+  label: string; subLabel: string; reelAngle: number;
 }) {
   const spokeAngles = [0, 60, 120, 180, 240, 300];
 
@@ -335,7 +335,6 @@ function SongCard({ song, index }: { song: CoverSong; index: number }) {
         <CassetteSVG
           label={song.label}
           subLabel={song.subLabel}
-          isPlaying={isPlaying}
           reelAngle={reelAngle}
         />
       </div>
