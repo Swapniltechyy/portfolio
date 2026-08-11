@@ -32,6 +32,17 @@ const projects: ProjectType[] = [
   },
   {
     id: '02',
+    title: 'Baba Loknath Communication',
+    description: 'A comprehensive travel and digital services platform offering ticket bookings and cyber cafe services under one roof.',
+    type: 'Production Website',
+    features: ['Travel Bookings', 'Digital Services', 'Modern UI', 'Responsive Design'],
+    image: '/projects/baba-loknath.png',
+    links: {
+      live: 'https://www.babaloknathcommunication.com/',
+    }
+  },
+  {
+    id: '03',
     title: 'Plan My Tour ERP',
     description: 'Comprehensive travel management and payment tracking system designed to streamline operations for travel agencies.',
     type: 'Travel Management & Payment System',
