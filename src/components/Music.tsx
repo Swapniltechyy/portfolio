@@ -259,8 +259,9 @@ function SongCard({ song, index }: { song: CoverSong; index: number }) {
     };
   }, [song.audioSrc]);
 
-  const togglePlay = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+  const togglePlay = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
+    e.preventDefault();
     const audio = audioRef.current;
     if (!audio) return;
 
@@ -328,7 +329,6 @@ function SongCard({ song, index }: { song: CoverSong; index: number }) {
       <div
         className="relative w-full p-3 pb-2 bg-[#EEEBE2] cursor-pointer select-none"
         onClick={togglePlay}
-        onTouchEnd={togglePlay}
         role="button"
         aria-label={isPlaying ? `Pause ${song.title}` : `Play ${song.title}`}
       >
@@ -392,7 +392,6 @@ function SongCard({ song, index }: { song: CoverSong; index: number }) {
           {/* Play/pause icon badge */}
           <button
             onClick={togglePlay}
-            onTouchEnd={togglePlay}
             className="shrink-0 w-9 h-9 rounded-xl bg-[#9CAF88]/15 border border-[#9CAF88]/30 flex items-center justify-center hover:bg-[#9CAF88]/30 transition-colors"
             aria-label={isPlaying ? 'Pause' : 'Play'}
           >
