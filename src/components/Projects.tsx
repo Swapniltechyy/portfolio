@@ -39,6 +39,16 @@ const projects: ProjectType[] = [
     }
   },
   {
+    title: 'E-Commerce Garments',
+    description: 'A modern women’s kurti e-commerce platform designed for a seamless and elegant online shopping experience.',
+    type: 'E-Commerce Website',
+    features: ['Product Catalog', 'Responsive Design', 'Modern UI', 'Shopping Cart', 'New Collections'],
+    image: '/projects/ecommerce-garments.jpg',
+    links: {
+      live: 'https://ecommerce-garments.netlify.app/',
+    }
+  },
+  {
     title: 'Plan My Tour ERP',
     description: 'Comprehensive travel management and payment tracking system designed to streamline operations for travel agencies.',
     type: 'Travel Management & Payment System',
