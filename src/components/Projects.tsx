@@ -29,6 +29,16 @@ const projects: ProjectType[] = [
     }
   },
   {
+    title: 'StayFinder',
+    description: 'A B2B accommodation discovery platform helping travel businesses find hotels, homestays, and PGs with location and contact details.',
+    type: 'B2B Travel Platform',
+    features: ['Exact Map Locations', 'Hotels, Homestays & PGs', 'Direct Contact & Phone', 'Area & Category Filter', 'B2B Accommodation Portal'],
+    image: '/projects/stayfinder.png',
+    links: {
+      live: 'https://stayfinder.swapniltech.com/',
+    }
+  },
+  {
     title: 'Baba Loknath Communication',
     description: 'A production-ready website for Baba Loknath Communication, offering travel bookings and digital services.',
     type: 'Production Website',
@@ -154,17 +164,17 @@ export default function Projects() {
 
                   <div className="flex flex-wrap gap-3">
                     {project.links.live && (
-                      <a href={project.links.live} className="retro-btn bg-[#111111] text-white px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#86A789] shadow-[2px_2px_0_#111111] gap-2">
+                      <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="retro-btn bg-[#111111] text-white px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#86A789] shadow-[2px_2px_0_#111111] gap-2">
                         Live Website <ExternalLink size={15} />
                       </a>
                     )}
                     {project.links.github && (
-                      <a href={project.links.github} className="retro-btn bg-white text-[#111111] px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#111111] shadow-[2px_2px_0_#111111] gap-2">
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="retro-btn bg-white text-[#111111] px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#111111] shadow-[2px_2px_0_#111111] gap-2">
                         GitHub <FaGithub size={15} />
                       </a>
                     )}
                     {project.links.details && (
-                      <a href={project.links.details} className="retro-btn bg-[#111111] text-white px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#86A789] shadow-[2px_2px_0_#111111] gap-2">
+                      <a href={project.links.details} target="_blank" rel="noopener noreferrer" className="retro-btn bg-[#111111] text-white px-5 py-2.5 text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_#86A789] shadow-[2px_2px_0_#111111] gap-2">
                         View Details <ArrowRight size={15} />
                       </a>
                     )}
