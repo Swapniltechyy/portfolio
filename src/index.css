@@ -6,12 +6,14 @@
   --color-primary: #86A789;
   --color-secondary: #D8B54B;
   --color-accent: #FCFAF7;
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-grotesk: 'Space Grotesk', sans-serif;
   --font-cursive: 'Caveat', cursive;
 }
 
 body {
+  font-family: var(--font-sans);
   background-color: var(--color-background);
   color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;

@@ -185,12 +185,12 @@ function CassetteSVG({
         fontFamily="'Pacifico', 'Dancing Script', Georgia, cursive"
         fontStyle="italic">{label}</text>
       <text x="210" y="114" textAnchor="middle" fill="#666" fontSize="9"
-        fontFamily="Arial, sans-serif" letterSpacing="2.5">{subLabel}</text>
+        fontFamily="'Space Grotesk', sans-serif" letterSpacing="2.5">{subLabel}</text>
 
       {/* C-90 / label text */}
-      <text x="58" y="180" fill="#1a1a1a" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="bold">C-90</text>
-      <text x="280" y="172" fill="#444" fontSize="8" fontFamily="Arial, sans-serif">NORMAL</text>
-      <text x="280" y="182" fill="#444" fontSize="8" fontFamily="Arial, sans-serif">POSITION (TYPE I)</text>
+      <text x="58" y="180" fill="#1a1a1a" fontSize="13" fontFamily="'Space Grotesk', sans-serif" fontWeight="bold">C-90</text>
+      <text x="280" y="172" fill="#444" fontSize="8" fontFamily="'Space Grotesk', sans-serif">NORMAL</text>
+      <text x="280" y="182" fill="#444" fontSize="8" fontFamily="'Space Grotesk', sans-serif">POSITION (TYPE I)</text>
 
       {/* Rainbow stripes */}
       <rect x="42" y="130" width="336" height="12" fill="#E83030" />

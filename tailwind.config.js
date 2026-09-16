@@ -14,7 +14,10 @@ export default {
         accent: '#8b5cf6',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["'Space Grotesk'", 'sans-serif'],
+        heading: ["'Space Grotesk'", 'sans-serif'],
+        grotesk: ["'Space Grotesk'", 'sans-serif'],
+        cursive: ["'Caveat'", 'cursive'],
       },
     },
   },

@@ -23,11 +23,13 @@ export default function Hero() {
             Available for new opportunities
           </motion.div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-heading tracking-tight mb-2 lg:mb-4 text-[#111111] leading-[1.15]">
-            Turning Ideas Into Practical Digital Solutions.
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-grotesk tracking-tight mb-2 lg:mb-4 text-[#111111] leading-[1.15]">
+            <span className="block">Turning Ideas Into</span>
+            <span className="block">Practical Digital</span>
+            <span className="block">Solutions.</span>
           </h1>
 
-          <p className="text-[13px] sm:text-sm md:text-base lg:text-lg text-[#2D2D2D] mb-3 lg:mb-6 max-w-2xl leading-relaxed font-medium">
+          <p className="text-[13px] sm:text-sm md:text-base lg:text-lg text-[#2D2D2D] mb-3 lg:mb-6 max-w-2xl leading-relaxed font-medium font-grotesk">
             MCA Student Specializing in Generative AI,<br className="hidden md:block" /> Passionate about Data Analytics,
             <br className="hidden md:block" /> Building Practical Digital Solutions, & Expressing Creativity Through Music.
           </p>
@@ -59,7 +61,7 @@ export default function Hero() {
           <div className="relative w-52 h-52 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[24rem] xl:h-[24rem]">
             {/* Decorative Arrow */}
             <div className="absolute -top-10 -left-24 lg:-top-6 lg:-left-32 z-20 hidden md:flex flex-col items-center">
-              <p className="font-cursive text-2xl lg:text-3xl text-[#111111] mb-1 -rotate-12">That's me!</p>
+              <p className="font-cursive font-bold text-2xl lg:text-3xl tracking-wide text-[#111111] mb-1 -rotate-12 select-none">That's me!</p>
               <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#111111] ml-4 mt-1">
                 <path d="M 30 20 Q 30 60 75 55" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" />
                 <path d="M 55 40 L 75 55 L 50 80" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
