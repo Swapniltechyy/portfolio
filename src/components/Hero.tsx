@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 md:pt-32 pb-8\10 lg:pb-16 flex flex-col justify-start">
+    <section className="relative pt-16 md:pt-32 pb-8 md:pb-10 lg:pb-16 flex flex-col justify-start">
       <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Text Content */}
