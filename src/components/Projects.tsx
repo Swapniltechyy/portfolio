@@ -108,7 +108,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 md:py-20 relative">
-      <div className="w-full max-w-[900px] mx-auto">
+      <div className="w-full max-w-[900px] mx-auto px-2 sm:px-0">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -125,8 +125,8 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        {/* 2-Column Grid on both Mobile and Desktop */}
-        <div className="grid grid-cols-2 gap-2.5 sm:gap-5 md:gap-6">
+        {/* Responsive Grid: 1-Column on Mobile, 2-Column on Tablet/Desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-6 md:gap-7 max-w-md sm:max-w-none mx-auto">
           {projects.map((project, index) => {
             return (
               <motion.div
@@ -136,10 +136,10 @@ export default function Projects() {
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 onClick={() => setSelectedProject(project)}
-                className="bg-[#FAF3E5] border-2 sm:border-[2.5px] border-[#111111] rounded-[16px] sm:rounded-[22px] md:rounded-[26px] shadow-[4px_4px_0px_#111111] sm:shadow-[6px_6px_0px_#111111] md:shadow-[7px_7px_0px_#111111] hover:shadow-[6px_6px_0px_#111111] sm:hover:shadow-[9px_9px_0px_#111111] md:hover:shadow-[10px_10px_0px_#111111] hover:-translate-y-0.5 sm:hover:-translate-y-1 hover:-translate-x-0.5 sm:hover:-translate-x-1 transition-all duration-300 overflow-hidden flex flex-col group cursor-pointer"
+                className="bg-[#FAF3E5] border-[2.5px] border-[#111111] rounded-[22px] sm:rounded-[24px] md:rounded-[26px] shadow-[6px_6px_0px_#111111] sm:shadow-[6px_6px_0px_#111111] md:shadow-[7px_7px_0px_#111111] hover:shadow-[8px_8px_0px_#111111] sm:hover:shadow-[9px_9px_0px_#111111] md:hover:shadow-[10px_10px_0px_#111111] hover:-translate-y-1 hover:-translate-x-0.5 transition-all duration-300 overflow-hidden flex flex-col group cursor-pointer"
               >
                 {/* Desktop Site Window / Image Container */}
-                <div className="relative w-full aspect-[16/10] overflow-hidden border-b-2 sm:border-b-[2.5px] border-[#111111] bg-[#FCFAF7] flex flex-col">
+                <div className="relative w-full aspect-[16/10] overflow-hidden border-b-[2.5px] border-[#111111] bg-[#FCFAF7] flex flex-col">
                   {/* Subtle Browser Window Header Mockup (Visible on sm and up) */}
                   <div className="hidden sm:flex w-full bg-[#EFE9DC] border-b border-[#111111]/20 px-3 py-1.5 items-center justify-between z-10 select-none">
                     <div className="flex items-center gap-1.5">
@@ -164,19 +164,19 @@ export default function Projects() {
                       }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center -z-10 bg-[#FAF7F2]">
-                      <span className="font-heading font-bold text-xs sm:text-xl text-[#111111]">{project.title}</span>
+                      <span className="font-heading font-bold text-sm sm:text-xl text-[#111111]">{project.title}</span>
                     </div>
 
                     {/* Top-Right Pill Badge */}
-                    <div className="absolute top-1.5 right-1.5 sm:top-3.5 sm:right-3.5 px-1.5 py-0.5 sm:px-3.5 sm:py-1 bg-white/95 backdrop-blur-xs border sm:border-2 border-[#111111] rounded-full text-[7px] sm:text-[11px] font-black uppercase tracking-tight sm:tracking-wider text-[#111111] shadow-[1.5px_1.5px_0px_#111111] sm:shadow-[2px_2px_0px_#111111] select-none whitespace-nowrap">
+                    <div className="absolute top-3 right-3 sm:top-3.5 sm:right-3.5 px-3 py-1 sm:px-3.5 sm:py-1 bg-white/95 backdrop-blur-xs border-2 border-[#111111] rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#111111] shadow-[2px_2px_0px_#111111] select-none whitespace-nowrap">
                       {project.badge}
                     </div>
                   </div>
                 </div>
 
                 {/* Bottom Bar: Title & Circular Action Button */}
-                <div className="px-2.5 py-1.5 sm:px-5 sm:py-3 md:px-5.5 md:py-3.5 min-h-[48px] sm:min-h-[64px] md:min-h-[70px] flex items-center justify-between gap-1.5 sm:gap-3 bg-[#FAF3E5] flex-1">
-                  <h3 className={`font-heading font-black text-[9.5px] xs:text-[11px] sm:text-[16px] md:text-[20px] leading-[1.12] sm:leading-[1.15] tracking-tight uppercase text-[#111111] ${project.displayTitle ? '' : 'truncate'}`}>
+                <div className="px-5 py-4 sm:px-5 sm:py-3.5 md:px-5.5 md:py-3.5 min-h-[64px] sm:min-h-[64px] md:min-h-[70px] flex items-center justify-between gap-3 bg-[#FAF3E5] flex-1">
+                  <h3 className={`font-heading font-black text-lg sm:text-base md:text-xl leading-tight sm:leading-tight tracking-tight uppercase text-[#111111] ${project.displayTitle ? '' : 'truncate'}`}>
                     {project.displayTitle || project.title}
                   </h3>
 
@@ -187,9 +187,9 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       title={`Open ${project.title} live site`}
-                      className="w-6 h-6 sm:w-9.5 sm:h-9.5 md:w-10.5 md:h-10.5 rounded-full border sm:border-2 border-[#111111] bg-transparent text-[#111111] group-hover:bg-[#86A789] group-hover:text-[#111111] group-hover:shadow-[1.5px_1.5px_0px_#111111] sm:group-hover:shadow-[2px_2px_0px_#111111] flex items-center justify-center shrink-0 transition-all duration-300"
+                      className="w-11 h-11 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border-2 border-[#111111] bg-white text-[#111111] shadow-[2px_2px_0px_#111111] group-hover:bg-[#86A789] group-hover:shadow-[3px_3px_0px_#111111] flex items-center justify-center shrink-0 transition-all duration-300"
                     >
-                      <ArrowUpRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={2.5} />
+                      <ArrowUpRight className="w-5 h-5 sm:w-5 sm:h-5 text-[#111111] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={2.5} />
                     </a>
                   ) : (
                     <button
@@ -199,9 +199,9 @@ export default function Projects() {
                         setSelectedProject(project);
                       }}
                       title="View project details"
-                      className="w-6 h-6 sm:w-9.5 sm:h-9.5 md:w-10.5 md:h-10.5 rounded-full border sm:border-2 border-[#111111] bg-transparent text-[#111111] group-hover:bg-[#86A789] group-hover:text-[#111111] group-hover:shadow-[1.5px_1.5px_0px_#111111] sm:group-hover:shadow-[2px_2px_0px_#111111] flex items-center justify-center shrink-0 transition-all duration-300"
+                      className="w-11 h-11 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full border-2 border-[#111111] bg-white text-[#111111] shadow-[2px_2px_0px_#111111] group-hover:bg-[#86A789] group-hover:shadow-[3px_3px_0px_#111111] flex items-center justify-center shrink-0 transition-all duration-300"
                     >
-                      <ArrowUpRight className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={2.5} />
+                      <ArrowUpRight className="w-5 h-5 sm:w-5 sm:h-5 text-[#111111] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={2.5} />
                     </button>
                   )}
                 </div>

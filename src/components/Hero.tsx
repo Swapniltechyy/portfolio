@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { openCalendly } from '../utils/calendly';
 
 export default function Hero() {
   return (
@@ -44,7 +45,11 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="retro-btn bg-white text-[#111111] px-4 py-1.5 text-xs font-bold hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#111111] shadow-[2px_2px_0_#111111] flex flex-1 lg:flex-none justify-center items-center whitespace-nowrap"
+              onClick={(e) => {
+                e.preventDefault();
+                openCalendly();
+              }}
+              className="retro-btn bg-white text-[#111111] px-4 py-1.5 text-xs font-bold hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#111111] shadow-[2px_2px_0_#111111] flex flex-1 lg:flex-none justify-center items-center whitespace-nowrap cursor-pointer"
             >
               Let's Connect
             </a>
