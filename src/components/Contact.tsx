@@ -2,6 +2,10 @@ import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
+const whatsappWelcomeMessage = encodeURIComponent(
+  "Hi Swapnil! 👋 I came across your portfolio and would love to connect with you."
+);
+
 const socialLinks = [
   {
     icon: FaGithub,
@@ -27,7 +31,7 @@ const socialLinks = [
   {
     icon: FaWhatsapp,
     label: 'WhatsApp',
-    href: 'https://wa.me/917063060602',
+    href: `https://wa.me/917063060602?text=${whatsappWelcomeMessage}`,
     hoverShadow: 'hover:shadow-[6px_6px_0_#25D366]',
     hoverIcon: 'group-hover:text-[#25D366] group-hover:scale-110',
   },

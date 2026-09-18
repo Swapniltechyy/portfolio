@@ -46,8 +46,8 @@ export default function CurrentlyBuilding() {
               <span className="w-2.5 h-2.5 rounded-full border-2 border-[#111111] bg-yellow-400 animate-pulse" />
               In Development
             </div>
-            <h3 className="text-lg md:text-xl font-extrabold mb-1 md:mb-2 font-heading text-[#111111]">Plan My Tour ERP</h3>
-            <p className="text-[#2D2D2D] font-medium text-sm md:text-base">Comprehensive travel management system.</p>
+            <h3 className="text-xl md:text-2xl font-extrabold mb-1 md:mb-2 font-heading text-[#111111]">StayFinder</h3>
+            <p className="text-[#2D2D2D] font-medium text-sm md:text-base">B2B accommodation & stay discovery platform.</p>
           </motion.div>
 
           {/* Item 3 */}
@@ -56,7 +56,23 @@ export default function CurrentlyBuilding() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="retro-card p-5 lg:p-6 md:col-span-2 relative overflow-hidden group bg-white border-[3px] h-full flex flex-col justify-center"
+            className="retro-card p-5 lg:p-6 relative overflow-hidden group bg-[#FCFAF7] border-[3px] h-full flex flex-col justify-center"
+          >
+            <div className="text-xs md:text-sm text-[#111111] font-bold mb-2 md:mb-3 flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full border-2 border-[#111111] bg-yellow-400 animate-pulse" />
+              In Development
+            </div>
+            <h3 className="text-lg md:text-xl font-extrabold mb-1 md:mb-2 font-heading text-[#111111]">Plan My Tour ERP</h3>
+            <p className="text-[#2D2D2D] font-medium text-sm md:text-base">Comprehensive travel management system.</p>
+          </motion.div>
+
+          {/* Item 4 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="retro-card p-5 lg:p-6 relative overflow-hidden group bg-white border-[3px] h-full flex flex-col justify-center"
           >
             <div className="text-xs md:text-sm text-[#111111] font-bold mb-2 md:mb-3 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full border-2 border-[#111111] bg-blue-400 animate-pulse" />
